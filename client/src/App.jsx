@@ -1,3 +1,5 @@
+import {NavBar,Welcome,Footer,Transactions,Services} from  './components';
+
 const App = () => {
 
   return (
