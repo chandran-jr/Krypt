@@ -11,6 +11,9 @@ const NavBarItem = ({title,classProps}) => {
 }
 
 const Navbar = () => {
+
+    const [toggleMenu,setToggleMenu] = React.useState(false);
+
     return (
         <nav className="w-full flex md:justify-center justify-between items-center p-4">
             <div className="md:flex-[0.5] flex-initial justify-center items-center">
@@ -25,6 +28,9 @@ const Navbar = () => {
                 Login
             </li>
             </ul>
+            <div className="flex-relative">
+
+            </div>
             
         </nav>
     );
