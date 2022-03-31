@@ -42,7 +42,11 @@ const Welcome = () => {
                     </div>
                 </div>
 
+                <div className="flex flex-1 flex-col items-center justify-center w-full md:mt-0 mt-10">
+                    <div className="p-3 justify-end items-start flex-col rounded-xl h-40 sm:w-72 w-full my-5 eth-card white-glassmorphism">
 
+                    </div>
+                </div>
 
             </div>
         </div>
