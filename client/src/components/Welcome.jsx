@@ -6,16 +6,20 @@ import {Loader} from './'
 
 const commonStyles = "min-h-[70px] sm:px-0 px-2 sm:min-w-[120px] flex justify-center items-center border-[2px] border-white-400 text-sm font-bold text-white";
 
-const Input = ({placeholder, }) => (
+const Input = ({placeholder, name, type, value, handleChange}) => (
     <input
     placeholder={placeholder}
-
+    type={type}
+    step={0.0001}
+    value={value}
+    onChange={(e) => handleChange(e,name)}
+    className="my-2"
     />
 
 )
 
 const handleChange = (e) => {
-    
+
 }
 
 const Welcome = () => {
