@@ -6,6 +6,18 @@ import {Loader} from './'
 
 const commonStyles = "min-h-[70px] sm:px-0 px-2 sm:min-w-[120px] flex justify-center items-center border-[2px] border-white-400 text-sm font-bold text-white";
 
+const Input = ({placeholder, }) => (
+    <input
+    placeholder={placeholder}
+
+    />
+
+)
+
+const handleChange = (e) => {
+    
+}
+
 const Welcome = () => {
     const connectWallet = () => {
     
@@ -53,10 +65,17 @@ const Welcome = () => {
                             </div>
                             <div>
                                 <p className="text-white font-light text-sm">
-                                    0xabggskdhsl....hshahksjja
+                                    Address
+                                </p>
+                                <p className="text-white font-semibold text-lg mt-1">
+                                    Ethereum
                                 </p>
                             </div>
                     </div>
+                </div>
+
+                <div className="p-5 sm:w-96 w-full flex flex-col justify-start items-center blue-glassmorphism">
+                    <Input placeholder="Address To" name="addressTo" type="text" handleChange={handleChange} />
                 </div>
                 </div>
 
