@@ -83,6 +83,8 @@ const Welcome = () => {
                     <Input placeholder="Amount (ETH)" name="amount" type="number" handleChange={handleChange} />
                     <Input placeholder="Keyword (GIF)" name="keyword" type="text" handleChange={handleChange} />
                     <Input placeholder="Enter Message" name="message" type="text" handleChange={handleChange} />
+
+                    <div className="h-[1px] w-full bg-gray-400 my-2" />
                 </div>
                 </div>
 

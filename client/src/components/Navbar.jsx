@@ -6,7 +6,7 @@ import {useState} from 'react';
 
 const NavBarItem = ({title,classProps}) => {
     return (
-        <li className={`mx-4 cursor-pointer ${classProps}`}>
+        <li className={`mx-4 cursor-pointer hover:text-blue-400 ${classProps}`}>
             {title}
         </li>
     )
