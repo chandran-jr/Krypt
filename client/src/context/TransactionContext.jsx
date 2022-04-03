@@ -2,6 +2,7 @@ import React, {useEffect,useState} from 'react';
 import {ethers} from 'ethers';
 
 import {contractABI, contractAddress} from '../utils/constants';
+import { parse } from '@ethersproject/transactions';
 
 export const TransactionContext = React.createContext();
 
@@ -13,12 +14,9 @@ const getEthereumContract = () => {
     const transactionContract = new ethers.Contract(contractAddress,contractABI,signer);
 
 
-console.log({
-    provider,
-    signer,
-    transactionContract
+return transactionContract;
+
 }
-)}
 
 export const TransactionProvider = ({children}) => {
 
@@ -62,7 +60,30 @@ export const TransactionProvider = ({children}) => {
                 return alert ("Please install Metamask on browser as an extension")
             }
             const { addressTo, amount, keyword, message } = formData;
-            getEthereumContract();
+            const transactionContract = getEthereumContract();
+            const parsedAmount = ethers.utils.parseEther(amount);
+
+            await ethereum.request({
+                method: 'eth_sendTransaction',
+                params: [{
+                    from: currentAccount,
+                    to: addressTo,
+                    gas: '0x5208',
+                    value: parsedAmount._hex
+                }]
+            })
+
+            const transactionHash = await transactionContract.addToBlockchain(addressTo,parsedAmount,message,keyword);
+
+            setIsLoading(true);
+            console.log(transactionHash.hash);
+            await transactionHash.wait();
+            setIsLoading(false);
+            console.log(transactionHash.hash);
+
+            const transactionCount = await transactionContract.getTransactionCount();
+
+            setTransactionCount(transactionCount.toNumber());
         }
         catch(error) {
             console.error(error);
