@@ -49,6 +49,10 @@ export const TransactionProvider = ({children}) => {
         console.log (accounts);
     }
 
+    const sendTransaction = async () => {
+        
+    }
+
     const connectWallet = async () => {
         try {
             if(!ethereum) {

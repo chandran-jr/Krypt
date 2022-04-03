@@ -3,6 +3,8 @@ import {AiOutlineClose} from 'react-icons/ai';
 import logo from '../../images/logo.png';
 import React from 'react';
 import {useState} from 'react';
+import { TransactionContext } from "../context/TransactionContext";
+import {useContext} from "react";
 
 const NavBarItem = ({title,classProps}) => {
     return (
@@ -15,6 +17,7 @@ const NavBarItem = ({title,classProps}) => {
 const Navbar = () => {
 
     const [toggleMenu,setToggleMenu] = useState(false);
+    const {connectWallet, currentAccount} = useContext(TransactionContext);
 
     return (
         <nav className="w-full flex md:justify-center justify-between items-center p-4">
@@ -26,9 +29,9 @@ const Navbar = () => {
             {["Market", "Exchange", "Tutorials", "Wallets"].map((item, index) => (
           <NavBarItem key={item + index} title={item} />
         ))}
-            <li className="bg-[#2952e3] py-2 px-7 mx-4 rounded-full cursor-pointer hover:bg-[#2546bd]">
+           {!currentAccount && (<li onClick={connectWallet} className="bg-[#2952e3] py-2 px-7 mx-4 rounded-full cursor-pointer hover:bg-[#2546bd]">
                 Login
-            </li>
+            </li>)}
             </ul>
             <div className="flex-relative">
                 {toggleMenu ? <AiOutlineClose fontSize={28} className="text-white cursor-pointer md:hidden" onClick={() => setToggleMenu(false)} /> : <HiMenuAlt4 fontSize={28} className="text-white cursor-pointer md:hidden" onClick={() => setToggleMenu(true)} />}
