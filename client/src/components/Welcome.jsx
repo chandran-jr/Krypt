@@ -25,13 +25,7 @@ const handleChange = (e) => {
 }
 
 const Welcome = () => {
-    const {value} = useContext(TransactionContext);
-
-    console.log(value); 
-    
-    const connectWallet = () => {
-    
-    }
+    const {connectWallet, currentAccount} = useContext(TransactionContext);
 
     const handleSubmit = (e) => {
         const { addressTo, amount, keyword, message } = formData;
@@ -46,9 +40,10 @@ const Welcome = () => {
                 <div className="flex flex-1 justify-start flex-col mf:mr-10">
                     <h1 className="text-3xl sm:text-5xl text-white text-gradient py-1">Send Crypto <br/>Anywhere, Anytime!</h1>
                     <p className="text-left mt-5 text-green-500 font-bold md:w-9/12 w-11/12 text-base">Explore the crypto world. Buy, Sell & hold crypto here!!</p>
-                    <button type="button" className="flex flex-row justify-center items-center my-5 bg-[#2952e3] p-3 rounded-full cursor-pointer hover:bg-[#2546bd] text-white font-bold" onClick={connectWallet}>
+                    
+                   {!currentAccount && (<button type="button" className="flex flex-row justify-center items-center my-5 bg-[#2952e3] p-3 rounded-full cursor-pointer hover:bg-[#2546bd] text-white font-bold" onClick={connectWallet}>
                         Connect Wallet
-                    </button>
+                    </button>)}
                     <div className="grid sm:grid-cols-3 grid-cols-2 w-full mt-10">
                         <div className={`rounded-tl-2xl ${commonStyles}`}>
                             Reliable
