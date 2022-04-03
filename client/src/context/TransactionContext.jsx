@@ -54,7 +54,6 @@ export const TransactionProvider = ({children}) => {
             console.error(error);
             throw new Error['No Ethereum Object'] 
         }
-        console.log (accounts);
     }
 
     const sendTransaction = async () => {
@@ -62,8 +61,8 @@ export const TransactionProvider = ({children}) => {
             if(!ethereum) {
                 return alert ("Please install Metamask on browser as an extension")
             }
-
-
+            const { addressTo, amount, keyword, message } = formData;
+            getEthereumContract();
         }
         catch(error) {
             console.error(error);
