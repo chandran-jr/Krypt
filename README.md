@@ -1,4 +1,4 @@
 # Krypt
 
-<img src="Screenshots/first.PNG" width="600px"/> <img src="Screenshots/second.PNG" width="600px"/>
-<img src="Screenshots/third.PNG" width="600px"/><img src="Screenshots/fourth.PNG" width="600px"/>
+<img src="Screenshots/first.PNG"/> <img src="Screenshots/second.PNG"/>
+<img src="Screenshots/third.PNG"/><img src="Screenshots/fourth.PNG"/>
