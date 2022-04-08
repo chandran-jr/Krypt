@@ -1,4 +1,7 @@
 # Krypt
 
 <img src="Screenshots/first.PNG"/> <img src="Screenshots/second.PNG"/>
-<img src="Screenshots/third.PNG"/><img src="Screenshots/fourth.PNG"/>
+### After connecting metamask
+<img src="Screenshots/third.PNG"/>
+### Transactions
+<img src="Screenshots/fourth.PNG"/>
