@@ -37,10 +37,10 @@ const Services = () => {
                     subTitle="The best rates with the lowest gas fees you will ever find here!!"
                 />
                 <ServiceCard
-                    color="bg-[#2952e3]"
-                    title="Security Guaranteed"
+                    color="bg-[#F84550]"
+                    title="Fastest Transactions Ever"
                     icon={<BsShieldFillCheck fontSize={21} className="text-white"/>}
-                    subTitle="Security is always our proority, we maintain privacy and quality"
+                    subTitle="We provide amongst the fastest transactions ever, in seconds!!"
                 />
             </div>
         </div>
