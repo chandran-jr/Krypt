@@ -1,6 +1,7 @@
 import {BsShieldFillCheck} from 'react-icons/bs';
 import {BiSearchAlt} from 'react-icons/bi';
 import {RiHeart2Fill} from 'react-icons/ri';
+import {BsFillLightningChargeFill} from 'react-icons/bs';
 
 const ServiceCard = ({color,title,icon,subTitle}) => (
 <div className="flex flex-row justify-start items-center white-glassmorphism p-3 m-2 cursor-pointer hover:shadow-xl">
@@ -31,15 +32,15 @@ const Services = () => {
                     subTitle="Security is always our priority, we maintain privacy and quality!!"
                 />
                 <ServiceCard
-                    color="bg-[#8984F8]"
+                    color="bg-[#F84550]"
                     title="Best Exchange Rates"
-                    icon={<BiSearchAlt fontSize={21} className="text-white"/>}
+                    icon={<RiHeart2Fill fontSize={21} className="text-white"/>}
                     subTitle="The best rates with the lowest gas fees you will ever find here!!"
                 />
                 <ServiceCard
-                    color="bg-[#F84550]"
+                    color="bg-[#DCE42B]"
                     title="Fastest Transactions Ever"
-                    icon={<BsShieldFillCheck fontSize={21} className="text-white"/>}
+                    icon={<BsFillLightningChargeFill fontSize={21} className="text-white"/>}
                     subTitle="We provide amongst the fastest transactions ever, in seconds!!"
                 />
             </div>
