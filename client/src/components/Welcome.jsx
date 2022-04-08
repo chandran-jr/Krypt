@@ -79,8 +79,8 @@ const Welcome = () => {
                                 <BsInfoCircle className="cursor-pointer" fontSize={17} color="white"/>
                             </div>
                             <div>
-                                <p className="text-white font-light text-sm">
-                                    Address
+                                <p className="text-white font-light text-sm overflow-clip ">
+                                    {currentAccount}
                                 </p>
                                 <p className="text-white font-semibold text-lg mt-1">
                                     Ethereum
