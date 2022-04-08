@@ -81,7 +81,7 @@ const Welcome = () => {
                             </div>
                             <div>
                                 <p className="text-white font-light text-sm">
-                                    {shortenAddress(currentAccount)}
+                                    {currentAccount ? shortenAddress(currentAccount) : (<h3>No wallet connected</h3>)}
                                 </p>
                                 <p className="text-white font-semibold text-lg mt-1">
                                     Ethereum
