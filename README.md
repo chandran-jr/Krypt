@@ -1,2 +1,3 @@
 # Krypt
-A jump into Web3 maybe.
+
+<img src="Screenshots/first.PNG" width="100px"/>
